@@ -1,0 +1,15 @@
+public static int digitalroot(int n) {
+    int total = 0;
+    int rightmost = 0;
+        total = total + rightmost;
+
+    while (n != 0) {
+        rightmost = n%10;
+        total = total + rightmost;
+        n /=10;
+    }
+    if (total < 10)
+        return total;
+    else
+        return digitalroot(total);
+}
